@@ -1,0 +1,30 @@
+3.a)
+ the first entry that throws 
+ rawAppointments.forEach(apt => console.log(apt.patient.contact.phone));
+01811000001
+N/A
+N/A
+N/A
+N/A
+01811000003
+
+
+List 2nd,3rd,4th,and 5th would through error
+Rewrite:rawAppointments.forEach(apt => console.log(apt?.patient?.contact?.phone??"N/A"));
+
+
+3.b)
+what is actually logged  is null 500
+
+it didnt apply because she didnt rawAppointments[3].followUpFee is not being override
+
+
+3.c)
+const discountA = apt.discount.amount || 100;
+
+is correct because it cheaks falsy value where ?? cheaks null ans undefined only
+
+
+3.e)
+
+null,"",0 value romves from array in fillter

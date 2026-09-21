@@ -1,0 +1,33 @@
+4.a)
+returns 
+c:\Users\bjit\Desktop\Test\Question1.js:55
+const getAppointmentCards = (appointments) => appointments.map(apt => { id: apt.id, fee: 0 });
+                                                                                       ^
+
+SyntaxError: Unexpected token ':'
+    at wrapSafe (node:internal/modules/cjs/loader:1866:18)
+    at Module._compile (node:internal/modules/cjs/loader:1908:20)
+    at Object..js (node:internal/modules/cjs/loader:2074:10)
+    at Module.load (node:internal/modules/cjs/loader:1656:32)
+    at Module._load (node:internal/modules/cjs/loader:1448:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47
+
+Node.js v26.8.2
+
+here fee:0 is wrong systax
+
+fee=0 could be proper syntax
+
+const getAppointmentIds = (appointments) => {
+appointments.map(apt => { apt.id });
+};
+const getAppointmentCards = (appointments) => appointments.map(apt => { id: apt.id, fee= 0 });
+
+
+b)
+[Running] node "c:\Users\bjit\Desktop\Test\Question1.js"
+[ 9, NaN, 2, 7 ] is logged
+it is a issues for parseInt ...it can be 
+it can be fixed with map

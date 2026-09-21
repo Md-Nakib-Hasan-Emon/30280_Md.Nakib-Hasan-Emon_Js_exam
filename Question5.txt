@@ -1,0 +1,22 @@
+5.b)
+true 
+
+
+
+
+5.d)
+for (var i = 0; i < 3; i++) {
+setTimeout(() => console.log("reminder for slot", i), 100);
+}
+
+
+output log:
+
+reminder for slot 3
+reminder for slot 3
+reminder for slot 3
+
+
+for (let i = 0; i < 3; i++) {
+setTimeout(() => console.log("reminder for slot", i), 100);
+}

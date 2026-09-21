@@ -1,0 +1,19 @@
+7.b)
+it shows the catch in my logs 
+
+
+c:\Users\bjit\Desktop\Test\Question1.js:6
+showToast("Booking failed");
+^
+
+ReferenceError: showToast is not defined
+
+
+c).
+
+[Running] node "c:\Users\bjit\Desktop\Test\Question1.js"
+c:\Users\bjit\Desktop\Test\Question1.js:1
+const slots = document.getElementsByClassName("slot-row");
+              ^
+
+ReferenceError: document is not defined

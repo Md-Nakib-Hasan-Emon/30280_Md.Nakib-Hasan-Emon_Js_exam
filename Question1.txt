@@ -1,0 +1,59 @@
+1.a)ans:
+Output:
+
+function
+undefined
+undefined
+c:\Users\bjit\Desktop\Test\Question1.js:4
+console.log(typeof consultFee);
+        ^
+
+ReferenceError: Cannot access 'consultFee' before initialization
+    at Object.<anonymous> (c:\Users\bjit\Desktop\Test\Question1.js:4:9)
+    at Module._compile (node:internal/modules/cjs/loader:1934:14)
+    at Object..js (node:internal/modules/cjs/loader:2074:10)
+    at Module.load (node:internal/modules/cjs/loader:1656:32)
+    at Module._load (node:internal/modules/cjs/loader:1448:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47
+
+
+It throws error which is referance error in line 4.
+formatSlot , buildInvoice and consultFee each behave differently because each have differrent type :
+formatSlot -> function
+buildInvoice ->var
+consultFee ->const  
+
+
+in js ,js engine has two execution phase one creates memory for data then one executes code line by line
+for function it stores complete function before execution so it runs completely fine
+
+for buildInvoicea function  it is stored in var so it is undefined
+
+for consultFee is const it can be hoisted but not accessible before declaration .because of Temporaldeadzone
+
+
+
+1.b)ans:
+1st call gives output 
+Dr. Karim Uddin @ undefined
+Dr. Nusrat Jahan @ undefined
+
+where this.clinic is undefined 
+
+2nd call give error 
+const printRoster = scheduler.printRoster;
+                    ^
+
+ReferenceError: scheduler is not defined
+
+because scheduleri is const  so it cannot be used like that
+
+
+the 1st would give proper output in non-strict classic script
+
+
+1.c)ans:
+
+this is worse, not better because it failed to fetch data to use in loop and the this refers to in block which is why it shows undefined

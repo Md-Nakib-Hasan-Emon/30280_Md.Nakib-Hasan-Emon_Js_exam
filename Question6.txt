@@ -1,0 +1,60 @@
+6.a)
+1: sync
+2: async body
+6: sync end
+3: after await
+5: then
+4: timeout 0
+
+role of the Call Stack, the Web APIs, the Callback (macrotask) Queue, the Microtask Queue
+and the Event Loop  for memory management in java
+
+Call Stack
+|
+Webapi
+|
+Microtask Queue
+|
+Callback (macrotask) Queue
+|
+Event Loop
+|
+Call Stack
+
+
+
+b).
+try{
+async function loadAppointmentPage(aptId) {
+    await fetchAppointment(aptId){
+        fetchDoctor(apt.doctorId){
+            doctor()=> {
+                console.log("Doctor:", doctor.name);
+            });
+
+        }
+
+    }
+}
+}
+.catch(err => console.log("Failed:", err.message));
+}
+
+
+
+c).
+
+
+async function loadAll(ids) {
+const appointments = [];
+for (const id of ids) {
+appointments.push(await 
+    
+    setTimeout(() => fetchAppointment(
+    id)), .003);
+    
+     // each call takes ~300ms
+}
+return appointments;
+}
+
